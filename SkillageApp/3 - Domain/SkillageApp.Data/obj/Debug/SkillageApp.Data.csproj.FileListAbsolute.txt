@@ -12,3 +12,17 @@ D:\Projects\Freelancer\SkillageApp\3 - Domain\SkillageApp.Data\obj\Debug\Skillag
 D:\Projects\Freelancer\SkillageApp\3 - Domain\SkillageApp.Data\obj\Debug\SkillageApp.Data.csproj.CopyComplete
 D:\Projects\Freelancer\SkillageApp\3 - Domain\SkillageApp.Data\obj\Debug\SkillageApp.Data.dll
 D:\Projects\Freelancer\SkillageApp\3 - Domain\SkillageApp.Data\obj\Debug\SkillageApp.Data.pdb
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Debug\SkillageApp.Data.dll.config
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Debug\SkillageApp.Data.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Debug\SkillageApp.Data.pdb
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Debug\EntityFramework.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Debug\SkillageApp.Infrastructure.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Debug\SkillageApp.Infrastructure.pdb
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Debug\EntityFramework.xml
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Debug\SkillageApp.Data.csprojAssemblyReference.cache
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Debug\SkillageApp.Data.csproj.CoreCompileInputs.cache
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Debug\SkillageApp.Data.csproj.CopyComplete
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Debug\SkillageApp.Data.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Debug\SkillageApp.Data.pdb

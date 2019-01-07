@@ -11,8 +11,6 @@ namespace SkillageApp.App.AutoMapper
                 x.AddProfile<DomainToViewModelMappingProfile>();
                 x.AddProfile<ViewModelToDomainMappingProfile>();
             });
-
-            //Mapper.Configuration.AssertConfigurationIsValid();
         }
     }
 }
