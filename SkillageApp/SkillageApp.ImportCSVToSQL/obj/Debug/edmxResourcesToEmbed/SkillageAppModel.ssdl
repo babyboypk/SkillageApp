@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SkillageAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DailyPrices">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExchangeId" Type="int" Nullable="false" />
+    <Property Name="StockSymbolId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="StockPriceOpen" Type="float" Nullable="false" />
+    <Property Name="StockPriceHigh" Type="float" Nullable="false" />
+    <Property Name="StockPriceLow" Type="float" Nullable="false" />
+    <Property Name="StockPriceClose" Type="float" Nullable="false" />
+    <Property Name="StockVolume" Type="bigint" Nullable="false" />
+    <Property Name="StockPriceAdjClose" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Exchanges">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StockSymbols">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId">
+    <End Role="Exchanges" Type="Self.Exchanges" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DailyPrices" Type="Self.DailyPrices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exchanges">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DailyPrices">
+        <PropertyRef Name="ExchangeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId">
+    <End Role="StockSymbols" Type="Self.StockSymbols" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="DailyPrices" Type="Self.DailyPrices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StockSymbols">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DailyPrices">
+        <PropertyRef Name="StockSymbolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SkillageAppModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailyPrices" EntityType="Self.DailyPrices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exchanges" EntityType="Self.Exchanges" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StockSymbols" EntityType="Self.StockSymbols" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId" Association="Self.FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId">
+      <End Role="Exchanges" EntitySet="Exchanges" />
+      <End Role="DailyPrices" EntitySet="DailyPrices" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId" Association="Self.FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId">
+      <End Role="StockSymbols" EntitySet="StockSymbols" />
+      <End Role="DailyPrices" EntitySet="DailyPrices" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

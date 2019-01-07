@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42862271-CA36-4694-8006-0B6176E49177}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkillageApp.Data.EF</RootNamespace>
+    <AssemblyName>SkillageApp.Data.EF</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDbContext.cs" />
+    <Compile Include="DbInitializer.cs" />
+    <Compile Include="EFRepository.cs" />
+    <Compile Include="EFUnitOfWork.cs" />
+    <Compile Include="Migrations\201901020941574_Inital.cs" />
+    <Compile Include="Migrations\201901020941574_Inital.Designer.cs">
+      <DependentUpon>201901020941574_Inital.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901030802274_VW_DailyPrices.cs" />
+    <Compile Include="Migrations\201901030802274_VW_DailyPrices.Designer.cs">
+      <DependentUpon>201901030802274_VW_DailyPrices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901030817052_VW_DailyPrices_1.cs" />
+    <Compile Include="Migrations\201901030817052_VW_DailyPrices_1.Designer.cs">
+      <DependentUpon>201901030817052_VW_DailyPrices_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901030818214_VW_DailyPrices_2.cs" />
+    <Compile Include="Migrations\201901030818214_VW_DailyPrices_2.Designer.cs">
+      <DependentUpon>201901030818214_VW_DailyPrices_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\VWDailyPricesRepository.cs" />
+    <Compile Include="Repositories\DailyPricesRepository.cs" />
+    <Compile Include="Repositories\ExchangeRepository.cs" />
+    <Compile Include="Repositories\StockSymbolRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\4 - Infrastructure\SkillageApp.Infrastructure\SkillageApp.Infrastructure.csproj">
+      <Project>{81c758f5-c6c0-42bb-92dd-eea179b25f2e}</Project>
+      <Name>SkillageApp.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\4 - Infrastructure\SkillageApp.Utilities\SkillageApp.Utilities.csproj">
+      <Project>{97c13d8b-ba17-4157-9433-6c546495f990}</Project>
+      <Name>SkillageApp.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkillageApp.Data\SkillageApp.Data.csproj">
+      <Project>{a1c68994-d049-4461-a764-6627e62955a0}</Project>
+      <Name>SkillageApp.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901020941574_Inital.resx">
+      <DependentUpon>201901020941574_Inital.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901030802274_VW_DailyPrices.resx">
+      <DependentUpon>201901030802274_VW_DailyPrices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901030817052_VW_DailyPrices_1.resx">
+      <DependentUpon>201901030817052_VW_DailyPrices_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901030818214_VW_DailyPrices_2.resx">
+      <DependentUpon>201901030818214_VW_DailyPrices_2.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,5 @@
+D:\Projects\Freelancer\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\bin\Debug\SkillageApp.Utilities.dll
+D:\Projects\Freelancer\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\bin\Debug\SkillageApp.Utilities.pdb
+D:\Projects\Freelancer\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Debug\SkillageApp.Utilities.csproj.CoreCompileInputs.cache
+D:\Projects\Freelancer\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Debug\SkillageApp.Utilities.dll
+D:\Projects\Freelancer\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Debug\SkillageApp.Utilities.pdb

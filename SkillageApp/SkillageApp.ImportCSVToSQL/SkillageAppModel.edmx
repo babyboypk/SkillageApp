@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SkillageAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DailyPrices">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ExchangeId" Type="int" Nullable="false" />
+          <Property Name="StockSymbolId" Type="int" Nullable="false" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="StockPriceOpen" Type="float" Nullable="false" />
+          <Property Name="StockPriceHigh" Type="float" Nullable="false" />
+          <Property Name="StockPriceLow" Type="float" Nullable="false" />
+          <Property Name="StockPriceClose" Type="float" Nullable="false" />
+          <Property Name="StockVolume" Type="bigint" Nullable="false" />
+          <Property Name="StockPriceAdjClose" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Exchanges">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StockSymbols">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId">
+          <End Role="Exchanges" Type="Self.Exchanges" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DailyPrices" Type="Self.DailyPrices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Exchanges">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DailyPrices">
+              <PropertyRef Name="ExchangeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId">
+          <End Role="StockSymbols" Type="Self.StockSymbols" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DailyPrices" Type="Self.DailyPrices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StockSymbols">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DailyPrices">
+              <PropertyRef Name="StockSymbolId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SkillageAppModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DailyPrices" EntityType="Self.DailyPrices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Exchanges" EntityType="Self.Exchanges" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StockSymbols" EntityType="Self.StockSymbols" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId" Association="Self.FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId">
+            <End Role="Exchanges" EntitySet="Exchanges" />
+            <End Role="DailyPrices" EntitySet="DailyPrices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId" Association="Self.FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId">
+            <End Role="StockSymbols" EntitySet="StockSymbols" />
+            <End Role="DailyPrices" EntitySet="DailyPrices" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SkillageAppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DailyPrice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExchangeId" Type="Int32" Nullable="false" />
+          <Property Name="StockSymbolId" Type="Int32" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="StockPriceOpen" Type="Double" Nullable="false" />
+          <Property Name="StockPriceHigh" Type="Double" Nullable="false" />
+          <Property Name="StockPriceLow" Type="Double" Nullable="false" />
+          <Property Name="StockPriceClose" Type="Double" Nullable="false" />
+          <Property Name="StockVolume" Type="Int64" Nullable="false" />
+          <Property Name="StockPriceAdjClose" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Exchanx" Relationship="Self.FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId" FromRole="DailyPrices" ToRole="Exchanges" />
+          <NavigationProperty Name="StockSymbol" Relationship="Self.FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId" FromRole="DailyPrices" ToRole="StockSymbols" />
+        </EntityType>
+        <EntityType Name="Exchanx">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DailyPrices" Relationship="Self.FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId" FromRole="Exchanges" ToRole="DailyPrices" />
+        </EntityType>
+        <EntityType Name="StockSymbol">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="DailyPrices" Relationship="Self.FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId" FromRole="StockSymbols" ToRole="DailyPrices" />
+        </EntityType>
+        <Association Name="FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId">
+          <End Role="Exchanges" Type="Self.Exchanx" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DailyPrices" Type="Self.DailyPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Exchanges">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DailyPrices">
+              <PropertyRef Name="ExchangeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId">
+          <End Role="StockSymbols" Type="Self.StockSymbol" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DailyPrices" Type="Self.DailyPrice" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StockSymbols">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DailyPrices">
+              <PropertyRef Name="StockSymbolId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SkillageAppEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="DailyPrices" EntityType="Self.DailyPrice" />
+          <EntitySet Name="Exchanges" EntityType="Self.Exchanx" />
+          <EntitySet Name="StockSymbols" EntityType="Self.StockSymbol" />
+          <AssociationSet Name="FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId" Association="Self.FK_dbo_DailyPrices_dbo_Exchanges_ExchangeId">
+            <End Role="Exchanges" EntitySet="Exchanges" />
+            <End Role="DailyPrices" EntitySet="DailyPrices" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId" Association="Self.FK_dbo_DailyPrices_dbo_StockSymbols_StockSymbolId">
+            <End Role="StockSymbols" EntitySet="StockSymbols" />
+            <End Role="DailyPrices" EntitySet="DailyPrices" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SkillageAppModelStoreContainer" CdmEntityContainer="SkillageAppEntities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="SkillageAppModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DailyPrices">
+            <EntityTypeMapping TypeName="SkillageAppModel.DailyPrice">
+              <MappingFragment StoreEntitySet="DailyPrices">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ExchangeId" ColumnName="ExchangeId" />
+                <ScalarProperty Name="StockSymbolId" ColumnName="StockSymbolId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="StockPriceOpen" ColumnName="StockPriceOpen" />
+                <ScalarProperty Name="StockPriceHigh" ColumnName="StockPriceHigh" />
+                <ScalarProperty Name="StockPriceLow" ColumnName="StockPriceLow" />
+                <ScalarProperty Name="StockPriceClose" ColumnName="StockPriceClose" />
+                <ScalarProperty Name="StockVolume" ColumnName="StockVolume" />
+                <ScalarProperty Name="StockPriceAdjClose" ColumnName="StockPriceAdjClose" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Exchanges">
+            <EntityTypeMapping TypeName="SkillageAppModel.Exchanx">
+              <MappingFragment StoreEntitySet="Exchanges">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StockSymbols">
+            <EntityTypeMapping TypeName="SkillageAppModel.StockSymbol">
+              <MappingFragment StoreEntitySet="StockSymbols">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

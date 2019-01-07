@@ -1,0 +1,16 @@
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\SkillageApp.ImportCSVToSQL.exe.config
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\SkillageApp.ImportCSVToSQL.exe
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\SkillageApp.ImportCSVToSQL.pdb
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\CsvHelper.dll
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\EntityFramework.dll
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\System.ValueTuple.dll
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\CsvHelper.xml
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\EntityFramework.xml
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\bin\Debug\System.ValueTuple.xml
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\obj\Debug\SkillageApp.ImportCSVToSQL.csproj.CoreCompileInputs.cache
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\obj\Debug\SkillageApp.ImportCSVToSQL.csproj.CopyComplete
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\obj\Debug\SkillageApp.ImportCSVToSQL.exe
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\obj\Debug\SkillageApp.ImportCSVToSQL.pdb
+D:\Projects\Freelancer\SkillageApp\SkillageApp.ImportCSVToSQL\obj\Debug\SkillageApp.ImportCSVToSQL.csprojAssemblyReference.cache

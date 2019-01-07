@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SkillageAppModelStoreContainer" CdmEntityContainer="SkillageAppEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="SkillageAppModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailyPrices">
+      <EntityTypeMapping TypeName="SkillageAppModel.DailyPrice">
+        <MappingFragment StoreEntitySet="DailyPrices">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ExchangeId" ColumnName="ExchangeId" />
+          <ScalarProperty Name="StockSymbolId" ColumnName="StockSymbolId" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="StockPriceOpen" ColumnName="StockPriceOpen" />
+          <ScalarProperty Name="StockPriceHigh" ColumnName="StockPriceHigh" />
+          <ScalarProperty Name="StockPriceLow" ColumnName="StockPriceLow" />
+          <ScalarProperty Name="StockPriceClose" ColumnName="StockPriceClose" />
+          <ScalarProperty Name="StockVolume" ColumnName="StockVolume" />
+          <ScalarProperty Name="StockPriceAdjClose" ColumnName="StockPriceAdjClose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exchanges">
+      <EntityTypeMapping TypeName="SkillageAppModel.Exchanx">
+        <MappingFragment StoreEntitySet="Exchanges">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StockSymbols">
+      <EntityTypeMapping TypeName="SkillageAppModel.StockSymbol">
+        <MappingFragment StoreEntitySet="StockSymbols">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
