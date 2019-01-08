@@ -39,10 +39,10 @@ namespace SkillageApp.WebAPI.App_Start
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
 
-            //Registe Entity Framwork Unit Of Work
+            //Register Entity Framwork Unit Of Work
             builder.RegisterType<EFUnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
 
-            //Registe Register Generic Repository
+            //Register Register Generic Repository
             builder.RegisterGeneric(typeof(EFRepository<,>)).As(typeof(IRepository<,>)).InstancePerRequest();
 
             //Register Database

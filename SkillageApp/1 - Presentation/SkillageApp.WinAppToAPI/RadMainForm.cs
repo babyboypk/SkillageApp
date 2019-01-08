@@ -34,6 +34,9 @@ namespace SkillageApp.WinAppToAPI
             LoadConfigDataGridView();
         }
 
+        /// <summary>
+        /// Load Data Exchange from WebAPI
+        /// </summary>
         private void LoadDataExchange()
         {
             var client = new RestClient(urlWebApi);
@@ -46,6 +49,9 @@ namespace SkillageApp.WinAppToAPI
             }
         }
 
+        /// <summary>
+        /// Load Data Stock Symbol from WebAPI
+        /// </summary>
         private void LoadDataStockSymbol()
         {
             var client = new RestClient(urlWebApi);
@@ -58,6 +64,9 @@ namespace SkillageApp.WinAppToAPI
             }
         }
 
+        /// <summary>
+        /// Load Data Daily Prices From Web API
+        /// </summary>
         private void LoadDataDailyPrices()
         {
             var client = new RestClient(urlWebApi);
@@ -70,8 +79,12 @@ namespace SkillageApp.WinAppToAPI
             }
         }
 
+        /// <summary>
+        /// Initialization, config data source, column Grid View. 
+        /// </summary>
         private void LoadConfigDataGridView()
         {
+            
             rgvExchangeDailyPrices.DataSource = lstDailyPrices;
 
             rgvExchangeDailyPrices.Columns["Id"].IsVisible = false;
@@ -86,6 +99,11 @@ namespace SkillageApp.WinAppToAPI
             rgvExchangeDailyPrices.Columns["StockPriceAdjClose"].HeaderText = "Stock Price Adj Close";
         }
 
+        /// <summary>
+        /// Format Cell Data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rgvExchangeDailyPrices_CellFormatting(object sender, Telerik.WinControls.UI.CellFormattingEventArgs e)
         {
             var columnName = e.CellElement.ColumnInfo.Name;
@@ -119,6 +137,11 @@ namespace SkillageApp.WinAppToAPI
             }
         }
 
+        /// <summary>
+        /// Format Control Editor of cell
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rgvExchangeDailyPrices_EditorRequired(object sender, Telerik.WinControls.UI.EditorRequiredEventArgs e)
         {
             var columnName = rgvExchangeDailyPrices.CurrentCell.ColumnInfo.Name;
@@ -145,6 +168,11 @@ namespace SkillageApp.WinAppToAPI
             }
         }
 
+        /// <summary>
+        /// Get Data changed and Put data change to web API
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void rgvExchangeDailyPrices_CellValueChanged(object sender, Telerik.WinControls.UI.GridViewCellEventArgs e)
         {
             var columnName = e.Column.Name;
@@ -191,13 +219,16 @@ namespace SkillageApp.WinAppToAPI
             // execute the request
             var response = client.Execute(request);
 
+            //Set value for notification win app
             radDesktopAlertMain.CaptionText = "Update Data";
 
             switch (response.StatusCode)
             {
+                //Case Update Sucessfull
                 case HttpStatusCode.OK:
                     radDesktopAlertMain.ContentText = "Update Exchange Daily Prices Successfully.";
                     break;
+                //Case Update Faild
                 default:
                     radDesktopAlertMain.ContentText = "Please check the data again.";
                     break;

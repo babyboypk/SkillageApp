@@ -28,6 +28,10 @@ namespace SkillageApp.WinAppToAPI
             }
         }
 
+        /// <summary>
+        /// Write log win application to EventLog of windows
+        /// </summary>
+        /// <param name="ex"></param>
         static void WriteLog(Exception ex)
         {
             var eventLog = new EventLog();
