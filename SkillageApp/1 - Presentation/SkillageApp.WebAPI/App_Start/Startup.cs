@@ -54,13 +54,13 @@ namespace SkillageApp.WebAPI.App_Start
             builder.RegisterType<DailyPricesService>().As<IDailyPricesService>().InstancePerRequest();
             builder.RegisterType<VWDailyPricesService>().As<IVWDailyPricesService>().InstancePerRequest();
 
-            //Register Repository Maping Interfacae
+            //Register Repository Mapping Interface
             builder.RegisterType<ExchangeRepository>().As<IExchangeRepository>().InstancePerRequest();
             builder.RegisterType<StockSymbolRepository>().As<IStockSymbolRepository>().InstancePerRequest();
             builder.RegisterType<DailyPricesRepository>().As<IDailyPricesRepository>().InstancePerRequest();
             builder.RegisterType<VWDailyPricesRepository>().As<IVWDailyPricesRepository>().InstancePerRequest();
 
-            //Register Automaper
+            //Register Automapper
             builder.Register(context =>
             {
                 var profiles = context.Resolve<IEnumerable<Profile>>();
