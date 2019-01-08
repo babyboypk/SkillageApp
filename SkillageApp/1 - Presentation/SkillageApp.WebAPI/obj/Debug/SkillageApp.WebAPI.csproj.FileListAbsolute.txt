@@ -123,3 +123,5 @@ D:\Projects\Github\SkillageApp\SkillageApp\1 - Presentation\SkillageApp.WebAPI\b
 D:\Projects\Github\SkillageApp\SkillageApp\1 - Presentation\SkillageApp.WebAPI\bin\Microsoft.Owin.Cors.xml
 D:\Projects\Github\SkillageApp\SkillageApp\1 - Presentation\SkillageApp.WebAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
 D:\Projects\Github\SkillageApp\SkillageApp\1 - Presentation\SkillageApp.WebAPI\bin\System.Web.Http.Owin.xml
+D:\Projects\Github\SkillageApp\SkillageApp\1 - Presentation\SkillageApp.WebAPI\bin\System.Web.Http.Cors.dll
+D:\Projects\Github\SkillageApp\SkillageApp\1 - Presentation\SkillageApp.WebAPI\bin\System.Web.Http.Cors.xml

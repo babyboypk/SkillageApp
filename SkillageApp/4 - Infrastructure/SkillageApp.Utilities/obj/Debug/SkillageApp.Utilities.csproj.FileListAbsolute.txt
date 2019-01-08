@@ -5,7 +5,7 @@ D:\Projects\Freelancer\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\
 D:\Projects\Freelancer\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Debug\SkillageApp.Utilities.pdb
 D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\bin\Debug\SkillageApp.Utilities.dll
 D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\bin\Debug\SkillageApp.Utilities.pdb
-D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Debug\SkillageApp.Utilities.csprojAssemblyReference.cache
 D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Debug\SkillageApp.Utilities.csproj.CoreCompileInputs.cache
 D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Debug\SkillageApp.Utilities.dll
 D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Debug\SkillageApp.Utilities.pdb
+D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Debug\SkillageApp.Utilities.csprojAssemblyReference.cache

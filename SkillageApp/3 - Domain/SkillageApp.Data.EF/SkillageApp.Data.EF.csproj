@@ -75,10 +75,7 @@
     <Compile Include="Repositories\ExchangeRepository.cs" />
     <Compile Include="Repositories\StockSymbolRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configurations\" />
-    <Folder Include="Extensions\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\..\4 - Infrastructure\SkillageApp.Infrastructure\SkillageApp.Infrastructure.csproj">
       <Project>{81c758f5-c6c0-42bb-92dd-eea179b25f2e}</Project>
