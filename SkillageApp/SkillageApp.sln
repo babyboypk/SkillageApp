@@ -44,6 +44,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Document", "5. Document"
 		5. Document\Tai Lieu Setup.docx = 5. Document\Tai Lieu Setup.docx
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Document", "5. Document\Document\Document.csproj", "{189E3C65-5AC2-4E00-AB0A-3424A1AEA558}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,6 +128,14 @@ Global
 		{A4F831A5-3F46-4343-A9A9-ECBB4FF302F3}.Debug|x86.ActiveCfg = Debug
 		{A4F831A5-3F46-4343-A9A9-ECBB4FF302F3}.Release|Any CPU.ActiveCfg = Release
 		{A4F831A5-3F46-4343-A9A9-ECBB4FF302F3}.Release|x86.ActiveCfg = Release
+		{189E3C65-5AC2-4E00-AB0A-3424A1AEA558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{189E3C65-5AC2-4E00-AB0A-3424A1AEA558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{189E3C65-5AC2-4E00-AB0A-3424A1AEA558}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{189E3C65-5AC2-4E00-AB0A-3424A1AEA558}.Debug|x86.Build.0 = Debug|Any CPU
+		{189E3C65-5AC2-4E00-AB0A-3424A1AEA558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{189E3C65-5AC2-4E00-AB0A-3424A1AEA558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{189E3C65-5AC2-4E00-AB0A-3424A1AEA558}.Release|x86.ActiveCfg = Release|Any CPU
+		{189E3C65-5AC2-4E00-AB0A-3424A1AEA558}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,6 +154,7 @@ Global
 		{58607983-04CE-4CDA-B26D-5D5B19BD3A6B} = {A9261383-269B-4CFB-9388-DE354EAEABBE}
 		{9714121B-4962-46AB-A832-558E38460B22} = {2DDC30FF-FF99-42E0-8433-73C421F33672}
 		{A4F831A5-3F46-4343-A9A9-ECBB4FF302F3} = {9714121B-4962-46AB-A832-558E38460B22}
+		{189E3C65-5AC2-4E00-AB0A-3424A1AEA558} = {5E5CC54F-0ABA-466B-9915-089EA2C753F7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4124414-7EB3-4E4B-8F07-0623631E8BFC}

@@ -48,6 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="File\Tai Lieu Setup.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="File\Script_Create_Data.sql" />
+    <Content Include="File\Script_Create_Database.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
