@@ -37,6 +37,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{9714121B
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SkillageSetup", "1 - Presentation\SkillageSetup\SkillageSetup.vdproj", "{A4F831A5-3F46-4343-A9A9-ECBB4FF302F3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Document", "5. Document", "{5E5CC54F-0ABA-466B-9915-089EA2C753F7}"
+	ProjectSection(SolutionItems) = preProject
+		5. Document\Script_Create_Data.sql = 5. Document\Script_Create_Data.sql
+		5. Document\Script_Create_Database.sql = 5. Document\Script_Create_Database.sql
+		5. Document\Tai Lieu Setup.docx = 5. Document\Tai Lieu Setup.docx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
