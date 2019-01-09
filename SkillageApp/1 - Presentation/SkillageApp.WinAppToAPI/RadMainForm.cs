@@ -26,6 +26,17 @@ namespace SkillageApp.WinAppToAPI
         public RadMainForm()
         {
             InitializeComponent();
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            Application.Idle += new EventHandler(OnLoaded);
+        }
+
+        private void OnLoaded(object sender,EventArgs args)
+        {
+            Application.Idle -= new EventHandler(OnLoaded);
 
             LoadDataExchange();
             LoadDataStockSymbol();
@@ -84,7 +95,6 @@ namespace SkillageApp.WinAppToAPI
         /// </summary>
         private void LoadConfigDataGridView()
         {
-            
             rgvExchangeDailyPrices.DataSource = lstDailyPrices;
 
             rgvExchangeDailyPrices.Columns["Id"].IsVisible = false;

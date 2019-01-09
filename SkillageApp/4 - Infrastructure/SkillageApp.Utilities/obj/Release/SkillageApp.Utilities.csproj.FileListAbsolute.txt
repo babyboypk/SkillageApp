@@ -1,0 +1,5 @@
+D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\bin\Release\SkillageApp.Utilities.dll
+D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\bin\Release\SkillageApp.Utilities.pdb
+D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Release\SkillageApp.Utilities.csproj.CoreCompileInputs.cache
+D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Release\SkillageApp.Utilities.dll
+D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Utilities\obj\Release\SkillageApp.Utilities.pdb

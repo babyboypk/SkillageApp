@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition2 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
             this.windows8Theme1 = new Telerik.WinControls.Themes.Windows8Theme();
             this.rgvExchangeDailyPrices = new Telerik.WinControls.UI.RadGridView();
             this.radDesktopAlertMain = new Telerik.WinControls.UI.RadDesktopAlert(this.components);
+            this.dotsLineWaitingBarIndicatorElement1 = new Telerik.WinControls.UI.DotsLineWaitingBarIndicatorElement();
             ((System.ComponentModel.ISupportInitialize)(this.rgvExchangeDailyPrices)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rgvExchangeDailyPrices.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -51,9 +52,9 @@
             this.rgvExchangeDailyPrices.MasterTemplate.EnableGrouping = false;
             this.rgvExchangeDailyPrices.MasterTemplate.EnablePaging = true;
             this.rgvExchangeDailyPrices.MasterTemplate.PageSize = 1000;
-            this.rgvExchangeDailyPrices.MasterTemplate.ViewDefinition = tableViewDefinition2;
+            this.rgvExchangeDailyPrices.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.rgvExchangeDailyPrices.Name = "rgvExchangeDailyPrices";
-            this.rgvExchangeDailyPrices.Size = new System.Drawing.Size(1167, 345);
+            this.rgvExchangeDailyPrices.Size = new System.Drawing.Size(1167, 420);
             this.rgvExchangeDailyPrices.TabIndex = 0;
             this.rgvExchangeDailyPrices.ThemeName = "Windows8";
             this.rgvExchangeDailyPrices.CellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.rgvExchangeDailyPrices_CellFormatting);
@@ -64,11 +65,18 @@
             // 
             this.radDesktopAlertMain.ThemeName = "Windows8";
             // 
+            // dotsLineWaitingBarIndicatorElement1
+            // 
+            this.dotsLineWaitingBarIndicatorElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.dotsLineWaitingBarIndicatorElement1.Name = "dotsLineWaitingBarIndicatorElement1";
+            this.dotsLineWaitingBarIndicatorElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.dotsLineWaitingBarIndicatorElement1.UseCompatibleTextRendering = false;
+            // 
             // RadMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 370);
+            this.ClientSize = new System.Drawing.Size(1192, 445);
             this.Controls.Add(this.rgvExchangeDailyPrices);
             this.Name = "RadMainForm";
             // 
@@ -89,5 +97,6 @@
         private Telerik.WinControls.Themes.Windows8Theme windows8Theme1;
         private Telerik.WinControls.UI.RadGridView rgvExchangeDailyPrices;
         private Telerik.WinControls.UI.RadDesktopAlert radDesktopAlertMain;
+        private Telerik.WinControls.UI.DotsLineWaitingBarIndicatorElement dotsLineWaitingBarIndicatorElement1;
     }
 }

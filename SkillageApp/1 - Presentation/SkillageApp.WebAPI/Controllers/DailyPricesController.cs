@@ -37,6 +37,26 @@ namespace SkillageApp.WebAPI.Controllers
             });
         }
 
+        [Route("getAllPaging")]
+        [HttpPost]
+        public HttpResponseMessage GetAllPaging(HttpRequestMessage request)
+        {
+            //Get Page Size Form Request
+            var pageSize = Convert.ToInt32(HttpContext.Current.Request.Params["pageSize"]);
+
+            //Get Page Index From Request
+            var page = Convert.ToInt32(HttpContext.Current.Request.Params["page"]);
+
+            return CreateHttpResponse(request, () =>
+            {
+                var responseData = _dailyPricesService.GetAllPaging("", page, pageSize);
+
+                var response = request.CreateResponse(HttpStatusCode.OK, responseData);
+
+                return response;
+            });
+        }
+
         [Route("detail/{id:int}")]
         [HttpGet]
         public HttpResponseMessage GetById(HttpRequestMessage request, int id)

@@ -1,0 +1,14 @@
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Release\SkillageApp.Data.dll.config
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Release\SkillageApp.Data.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Release\SkillageApp.Data.pdb
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Release\EntityFramework.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Release\EntityFramework.SqlServer.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Release\SkillageApp.Infrastructure.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Release\SkillageApp.Infrastructure.pdb
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Release\EntityFramework.xml
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\bin\Release\EntityFramework.SqlServer.xml
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Release\SkillageApp.Data.csprojAssemblyReference.cache
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Release\SkillageApp.Data.csproj.CoreCompileInputs.cache
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Release\SkillageApp.Data.csproj.CopyComplete
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Release\SkillageApp.Data.dll
+D:\Projects\Github\SkillageApp\SkillageApp\3 - Domain\SkillageApp.Data\obj\Release\SkillageApp.Data.pdb

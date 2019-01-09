@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div id="grid"></div>
+    </div>
+</div>
+@section Scripts
+{
+    <script type="text/javascript">
+        var urlAPI = urlWebApi + "/vwDailyPrices/getAllPaging";
+        $("#grid").kendoGrid({
+            dataSource: {
+                transport: {
+                    read: {
+                        url: urlAPI,
+                        dataType: "json",
+                        type: "POST"
+                    }
+                },
+                pageSize: 1000,
+                serverPaging: true,
+                serverFiltering: false,
+                serverSorting: false,
+                schema: {
+                    data: "Results",
+                    total: "RowCount"
+                }
+            },
+            height: 550,
+            filterable: false,
+            sortable: true,
+            pageable: true,
+            columns: [
+                {
+                    field: "Exchange"
+                },
+                {
+                    field: "StockSymbol",
+                    title: "Stock Symbol"
+                },
+                {
+                    field: "Date",
+                    template: "#= kendo.toString(kendo.parseDate(Date, 'yyyy-MM-dd'), 'dd/MM/yyyy') #"
+                },
+                {
+                    field: "StockPriceOpen",
+                    title: "Stock Price Open"
+                },
+                {
+                    field: "StockPriceHigh",
+                    title: "Stock Price High"
+                },
+                {
+                    field: "StockPriceLow",
+                    title: "Stock Price Low"
+                },
+                {
+                    field: "StockPriceClose",
+                    title: "Stock Price Close"
+                },
+                {
+                    field: "StockVolume",
+                    title: "Stock Volume"
+                },
+                {
+                    field: "StockPriceAdjClose",
+                    title: "Stock Price Adj Close"
+                }
+            ]
+        });
+    </script>
+}
