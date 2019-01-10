@@ -51,6 +51,8 @@
     <None Include="File\Tai Lieu Setup.docx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="File\3b.jpg" />
+    <Content Include="File\3c.png" />
     <Content Include="File\Script_Create_Data.sql" />
     <Content Include="File\Script_Create_Database.sql" />
   </ItemGroup>

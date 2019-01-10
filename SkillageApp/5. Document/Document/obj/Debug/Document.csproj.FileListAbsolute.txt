@@ -1,0 +1,7 @@
+D:\Projects\Github\SkillageApp\SkillageApp\5. Document\Document\bin\Debug\Document.exe.config
+D:\Projects\Github\SkillageApp\SkillageApp\5. Document\Document\bin\Debug\Document.exe
+D:\Projects\Github\SkillageApp\SkillageApp\5. Document\Document\bin\Debug\Document.pdb
+D:\Projects\Github\SkillageApp\SkillageApp\5. Document\Document\obj\Debug\Document.csprojAssemblyReference.cache
+D:\Projects\Github\SkillageApp\SkillageApp\5. Document\Document\obj\Debug\Document.csproj.CoreCompileInputs.cache
+D:\Projects\Github\SkillageApp\SkillageApp\5. Document\Document\obj\Debug\Document.exe
+D:\Projects\Github\SkillageApp\SkillageApp\5. Document\Document\obj\Debug\Document.pdb

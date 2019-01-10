@@ -8,3 +8,4 @@ D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Infras
 D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Infrastructure\obj\Debug\SkillageApp.Infrastructure.csproj.CoreCompileInputs.cache
 D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Infrastructure\obj\Debug\SkillageApp.Infrastructure.dll
 D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Infrastructure\obj\Debug\SkillageApp.Infrastructure.pdb
+D:\Projects\Github\SkillageApp\SkillageApp\4 - Infrastructure\SkillageApp.Infrastructure\obj\Debug\SkillageApp.Infrastructure.csprojAssemblyReference.cache
