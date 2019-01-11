@@ -33,20 +33,36 @@ namespace SkillageApp.WebAPI.Infrastructure.Core
                         Trace.WriteLine($"- Property: \"{ve.PropertyName}\", Error: \"{ve.ErrorMessage}\"");
                     }
                 }
-                //LogError(ex);
+                LogError(ex);
                 response = requestMessage.CreateResponse(HttpStatusCode.BadRequest, ex.InnerException.Message);
             }
             catch (DbUpdateException dbEx)
             {
-                //LogError(dbEx);
+                LogError(dbEx);
                 response = requestMessage.CreateResponse(HttpStatusCode.BadRequest, dbEx.InnerException.Message);
             }
             catch (Exception ex)
             {
-                //LogError(ex);
+                LogError(ex);
                 response = requestMessage.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
             return response;
+        }
+
+        /// <summary>
+        /// Write log Web API to EventLog of windows
+        /// </summary>
+        /// <param name="ex"></param>
+        protected void LogError(Exception ex)
+        {
+            var eventLog = new EventLog();
+            if (!(EventLog.SourceExists("SkillageAPI")))
+            {
+                EventLog.CreateEventSource("SkillageAPI", "Log");
+            }
+            eventLog.Source = "SkillageAPI";
+
+            eventLog.WriteEntry(ex.ToString(), EventLogEntryType.Error);
         }
 
     }

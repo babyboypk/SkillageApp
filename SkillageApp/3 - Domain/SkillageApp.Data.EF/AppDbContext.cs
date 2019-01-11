@@ -29,6 +29,8 @@ namespace SkillageApp.Data.EF
         public DbSet<StockSymbol> StockSymbols { get; set; }
         public DbSet<DailyPrices> DailyPriceses { get; set; }
         public DbSet<Exchange> Exchanges { get; set; }
+
+        /// View
         public DbSet<VWDailyPrices> VWDailyPrices { get; set; }
 
         public static AppDbContext Create()
@@ -39,7 +41,9 @@ namespace SkillageApp.Data.EF
         public override int SaveChanges()
         {
             var modified = ChangeTracker.Entries().Where(e => e.State == EntityState.Modified || e.State == EntityState.Added);
-
+            /// <summary>
+            /// Tracking self entity base
+            /// </summary>
             foreach (DbEntityEntry item in modified)
             {
                 var changedOrAddedItem = item.Entity as IDateTracking;
