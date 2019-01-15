@@ -80,14 +80,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SkillageApp.WinAppToAPI.exe" size="248832">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SkillageApp.WinAppToAPI.exe" size="247808">
       <assemblyIdentity name="SkillageApp.WinAppToAPI" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>pPqrSPStFFhzR2UgTHlw2LIFjbObbe5MYP3bNfvZl88=</dsig:DigestValue>
+        <dsig:DigestValue>qT328c8Jt3KnMV98j9Fq5OQESeudd1FJlq6N+q77F4k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
