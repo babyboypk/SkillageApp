@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="File\SkillApp-TestCase - v1.0 - Test execution.xlsx" />
+    <None Include="File\SkillApp-TestPlan.DOCX" />
     <None Include="File\Tai Lieu Setup.docx" />
   </ItemGroup>
   <ItemGroup>
